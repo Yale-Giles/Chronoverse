@@ -24,6 +24,10 @@ contract VaultManager is IVaultManager, Ownable, ReentrancyGuard {
     uint256 public constant MIN_UNLOCK_DELAY = 1 days;
     uint256 public constant MAX_UNLOCK_DELAY = 100 * 365 days;
     
+    // Events for better tracking
+    event VaultUpdated(uint256 indexed vaultId, uint256 newUnlockTime);
+    event VaultStatusChanged(uint256 indexed vaultId, VaultStatus oldStatus, VaultStatus newStatus);
+    
     constructor() Ownable(msg.sender) {
         _vaultCounter = 0;
     }
