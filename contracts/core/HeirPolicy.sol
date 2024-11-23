@@ -37,6 +37,11 @@ contract HeirPolicy is IHeirPolicy, AccessControl {
         VaultLib.validateArrayLengths(heirs.length, percentages.length);
         VaultLib.validatePercentages(percentages);
         
+        // Additional validation for quorum
+        if (quorum > heirs.length) {
+            revert VaultErrors.InvalidConfiguration();
+        }
+        
         if (heirs.length > VaultLib.getMaxHeirs()) {
             revert VaultErrors.InvalidConfiguration();
         }
