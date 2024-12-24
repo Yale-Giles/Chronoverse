@@ -130,5 +130,19 @@ contract SecretVault is ISecretVault, AccessControl {
     function isRevealed(uint256 vaultId) external view returns (bool) {
         return _revealed[vaultId];
     }
+    
+    /**
+     * @dev Returns vault owner
+     */
+    function getVaultOwner(uint256 vaultId) external view returns (address) {
+        return _vaultOwners[vaultId];
+    }
+    
+    /**
+     * @dev Checks if secret exists for vault
+     */
+    function hasSecret(uint256 vaultId) external view returns (bool) {
+        return bytes(_secrets[vaultId].encryptedCID).length > 0 && !_secrets[vaultId].isRevoked;
+    }
 }
 
