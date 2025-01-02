@@ -17,7 +17,11 @@
     "node": "hardhat node",
     "clean": "hardhat clean",
     "lint": "solhint 'contracts/**/*.sol'",
-    "format": "prettier --write 'contracts/**/*.sol' 'test/**/*.js'"
+    "format": "prettier --write 'contracts/**/*.sol' 'test/**/*.js'",
+    "size-check": "node scripts/size-check.js",
+    "coverage-analyze": "node scripts/analyze-coverage.js",
+    "network-check": "node scripts/network-check.js",
+    "audit-prep": "node scripts/audit-prep.js"
   },
   "keywords": [
     "blockchain",
