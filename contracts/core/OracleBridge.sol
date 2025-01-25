@@ -145,5 +145,19 @@ contract OracleBridge is IOracleBridge, AccessControl {
     function isTrustedOracle(address oracle) external view returns (bool) {
         return _trustedOracles[oracle];
     }
+    
+    /**
+     * @dev Returns oracle address for a vault
+     */
+    function getOracleAddress(uint256 vaultId) external view returns (address) {
+        return _conditions[vaultId].oracleAddress;
+    }
+    
+    /**
+     * @dev Checks if condition has been fulfilled
+     */
+    function isConditionFulfilled(uint256 vaultId) external view returns (bool) {
+        return _conditions[vaultId].isFulfilled;
+    }
 }
 
