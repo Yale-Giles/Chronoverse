@@ -192,6 +192,20 @@ contract UnlockExecutor is IUnlockExecutor, AccessControl, ReentrancyGuard {
     }
     
     /**
+     * @dev Returns vault token address
+     */
+    function getVaultToken(uint256 vaultId) external view returns (address) {
+        return _vaultTokens[vaultId];
+    }
+    
+    /**
+     * @dev Checks if assets have been deposited
+     */
+    function hasAssets(uint256 vaultId) external view returns (bool) {
+        return _vaultBalances[vaultId] > 0;
+    }
+    
+    /**
      * @dev Receives ETH deposits
      */
     receive() external payable {}
