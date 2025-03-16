@@ -58,6 +58,16 @@ npm run deploy:arbitrum
 4. Compile contracts with `npm run compile`
 5. Run tests to verify setup `npm test`
 
+## Documentation
+
+- 📚 [API Reference](./docs/API.md)
+- 📖 [User Guide](./docs/USER_GUIDE.md)
+- 🏗️ [Architecture](./docs/ARCHITECTURE.md)
+- 🔧 [Integration Guide](./docs/INTEGRATION.md)
+- ❓ [FAQ](./docs/FAQ.md)
+- 🔍 [Troubleshooting](./docs/TROUBLESHOOTING.md)
+- 📋 [Best Practices](./docs/BEST_PRACTICES.md)
+
 ## Community
 
 - [Documentation](./docs)
