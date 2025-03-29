@@ -43,9 +43,20 @@ npm run compile
 # Run tests
 npm test
 
-# Deploy
+# Deploy to local network
 npm run deploy
+
+# Deploy to Arbitrum
+npm run deploy:arbitrum
 ```
+
+## Quick Start
+
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Copy `.env.example` to `.env` and configure
+4. Compile contracts with `npm run compile`
+5. Run tests to verify setup `npm test`
 
 ## License
 
