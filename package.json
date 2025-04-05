@@ -21,7 +21,10 @@
     "size-check": "node scripts/size-check.js",
     "coverage-analyze": "node scripts/analyze-coverage.js",
     "network-check": "node scripts/network-check.js",
-    "audit-prep": "node scripts/audit-prep.js"
+    "audit-prep": "node scripts/audit-prep.js",
+    "validate-config": "node scripts/validate-config.js",
+    "backup-config": "node scripts/backup-config.js",
+    "monitor": "node scripts/monitor-vaults.js"
   },
   "keywords": [
     "blockchain",
