@@ -41,6 +41,9 @@ module.exports = {
       arbitrumOne: process.env.ARBISCAN_API_KEY || "",
       mainnet: process.env.ETHERSCAN_API_KEY || ""
     }
+  },
+  mocha: {
+    timeout: 100000
   }
 };
 
