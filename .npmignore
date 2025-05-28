@@ -1,0 +1,16 @@
+test/
+examples/
+docs/
+scripts/
+.github/
+.git/
+.env
+.env.example
+hardhat.config.js
+.prettierrc.json
+.solhint.json
+.editorconfig
+coverage/
+cache/
+artifacts/
+
