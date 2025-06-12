@@ -125,5 +125,19 @@ contract VaultManager is IVaultManager, Ownable, ReentrancyGuard {
     function getVaultCount() external view returns (uint256) {
         return _vaultCounter;
     }
+    
+    /**
+     * @dev Checks if a vault exists
+     */
+    function vaultExists(uint256 vaultId) external view returns (bool) {
+        return _vaults[vaultId].owner != address(0);
+    }
+    
+    /**
+     * @dev Returns total vaults created by an owner
+     */
+    function getOwnerVaultCount(address owner) external view returns (uint256) {
+        return _ownerVaults[owner].length;
+    }
 }
 
