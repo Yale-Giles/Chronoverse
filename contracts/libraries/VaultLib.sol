@@ -87,5 +87,19 @@ library VaultLib {
     function getMaxHeirs() internal pure returns (uint256) {
         return MAX_HEIRS;
     }
+    
+    /**
+     * @dev Validates percentage is within valid range
+     */
+    function isValidPercentage(uint256 percentage) internal pure returns (bool) {
+        return percentage > 0 && percentage <= PERCENTAGE_BASE;
+    }
+    
+    /**
+     * @dev Validates time is in future
+     */
+    function isFutureTime(uint256 timestamp) internal view returns (bool) {
+        return timestamp > block.timestamp;
+    }
 }
 
