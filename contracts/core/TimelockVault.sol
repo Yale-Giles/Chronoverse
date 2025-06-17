@@ -115,5 +115,23 @@ contract TimelockVault is ITimelockVault, AccessControl, ReentrancyGuard {
     function getTimeLockConfig(uint256 vaultId) external view returns (TimeLockConfig memory) {
         return _timeLocks[vaultId];
     }
+    
+    /**
+     * @dev Returns if unlock has been triggered
+     */
+    function isTriggered(uint256 vaultId) external view returns (bool) {
+        return _timeLocks[vaultId].isTriggered;
+    }
+    
+    /**
+     * @dev Returns time remaining until unlock
+     */
+    function getTimeRemaining(uint256 vaultId) external view returns (uint256) {
+        TimeLockConfig storage timeLock = _timeLocks[vaultId];
+        if (timeLock.unlockTime == 0 || block.timestamp >= timeLock.unlockTime) {
+            return 0;
+        }
+        return timeLock.unlockTime - block.timestamp;
+    }
 }
 
