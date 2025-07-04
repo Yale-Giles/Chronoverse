@@ -95,6 +95,22 @@ Do not create public issues for security concerns.
 - Join our Discord community
 - Check existing documentation
 
+## Development Workflow
+
+### Branch Strategy
+- `main`: Production-ready code
+- `develop`: Integration branch
+- `feature/*`: New features
+- `fix/*`: Bug fixes
+- `docs/*`: Documentation
+
+### Before Submitting PR
+1. Update from main
+2. Run tests locally
+3. Check code coverage
+4. Update documentation
+5. Write clear commit messages
+
 ## License
 
 By contributing, you agree that your contributions will be licensed under the MIT License.
