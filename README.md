@@ -1,6 +1,6 @@
 # Chronoverse
 
-Decentralized time-capsule and inheritance protocol for secure asset management and future execution.
+A decentralized time-capsule and inheritance protocol that locks assets, messages, and secrets on-chain, releasing them only at future timestamps or verifiable conditions (proof-of-life, heirs, or oracle triggers).
 
 ## Overview
 
