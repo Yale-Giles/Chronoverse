@@ -1,0 +1,32 @@
+name: Security Checks
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 0 * * 0'  # Weekly
+
+jobs:
+  slither:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Run Slither
+      uses: crytic/slither-action@v0.3.0
+      with:
+        target: 'contracts/'
+        slither-args: '--filter-paths "node_modules" --exclude naming-convention'
+  
+  dependency-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Check dependencies
+      run: npm audit --audit-level=moderate
+
