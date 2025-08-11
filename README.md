@@ -58,6 +58,13 @@ npm run deploy:arbitrum
 4. Compile contracts with `npm run compile`
 5. Run tests to verify setup `npm test`
 
+## Community
+
+- [Documentation](./docs)
+- [Contributing Guidelines](./CONTRIBUTING.md)
+- [Security Policy](./docs/SECURITY.md)
+- [Changelog](./docs/CHANGELOG.md)
+
 ## License
 
 MIT
