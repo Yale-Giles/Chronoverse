@@ -13,7 +13,10 @@
     "func-name-mixedcase": "warn",
     "modifier-name-mixedcase": "warn",
     "contract-name-camelcase": "warn",
-    "var-name-mixedcase": "warn"
+    "var-name-mixedcase": "warn",
+    "code-complexity": ["warn", 8],
+    "function-max-lines": ["warn", 50],
+    "max-states-count": ["warn", 15]
   }
 }
 
