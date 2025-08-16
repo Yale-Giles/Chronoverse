@@ -32,7 +32,15 @@ module.exports = {
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS === "true",
-    currency: "USD"
+    currency: "USD",
+    outputFile: "gas-report.txt",
+    noColors: true
+  },
+  etherscan: {
+    apiKey: {
+      arbitrumOne: process.env.ARBISCAN_API_KEY || "",
+      mainnet: process.env.ETHERSCAN_API_KEY || ""
+    }
   }
 };
 
