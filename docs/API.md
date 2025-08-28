@@ -261,6 +261,24 @@ All contracts use custom errors for gas efficiency:
 - `ZeroAddress()`
 - `EmptyArray()`
 
+## Common Workflows
+
+### Complete Vault Setup Workflow
+
+1. Create vault
+2. Configure heirs
+3. Store secrets
+4. Deposit assets
+5. Monitor status
+
+### Heir Claim Workflow
+
+1. Wait for unlock
+2. Verify conditions met
+3. Trigger unlock
+4. Execute distribution
+5. Claim assets
+
 ## Usage Examples
 
 ### Creating a Vault
