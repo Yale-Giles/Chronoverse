@@ -171,5 +171,26 @@ contract HeirPolicy is IHeirPolicy, AccessControl {
         
         emit HeirClaimed(vaultId, heir, 0);
     }
+    
+    /**
+     * @dev Returns heir count for a vault
+     */
+    function getHeirCount(uint256 vaultId) external view returns (uint256) {
+        return _heirPolicies[vaultId].heirs.length;
+    }
+    
+    /**
+     * @dev Checks if address is an heir
+     */
+    function isHeir(uint256 vaultId, address account) external view returns (bool) {
+        HeirConfig storage policy = _heirPolicies[vaultId];
+        uint256 index = _heirIndex[vaultId][account];
+        
+        if (index >= policy.heirs.length) {
+            return false;
+        }
+        
+        return policy.heirs[index].heirAddress == account || (index == 0 && policy.heirs[0].heirAddress == account);
+    }
 }
 
