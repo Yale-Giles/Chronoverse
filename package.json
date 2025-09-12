@@ -1,6 +1,7 @@
 {
   "name": "chronoverse",
   "version": "1.0.0",
+  "author": "Chronoverse Team",
   "repository": {
     "type": "git",
     "url": "https://github.com/Yale-Giles/Chronoverse.git"
