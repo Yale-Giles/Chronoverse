@@ -150,5 +150,21 @@ contract ProofOfLife is IProofOfLife, AccessControl {
     function getLifeStatus(uint256 vaultId) external view returns (LifeStatus memory) {
         return _lifeStatus[vaultId];
     }
+    
+    /**
+     * @dev Returns vault owner
+     */
+    function getVaultOwner(uint256 vaultId) external view returns (address) {
+        return _vaultOwners[vaultId];
+    }
+    
+    /**
+     * @dev Checks if grace period is active
+     */
+    function isGracePeriodActive(uint256 vaultId) external view returns (bool) {
+        LifeStatus storage status = _lifeStatus[vaultId];
+        uint256 inactiveTime = status.lastCheckIn + status.inactivityPeriod;
+        return block.timestamp >= inactiveTime && block.timestamp < inactiveTime + status.gracePeriod;
+    }
 }
 
