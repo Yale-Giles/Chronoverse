@@ -1,6 +1,10 @@
 {
   "name": "chronoverse",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yale-Giles/Chronoverse.git"
+  },
   "description": "Decentralized time-capsule and inheritance protocol",
   "main": "index.js",
   "scripts": {
