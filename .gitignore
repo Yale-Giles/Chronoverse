@@ -50,3 +50,6 @@ backups/
 *.tmp
 *.bak
 
+# Deployment summaries
+deployment-summary.json
+
