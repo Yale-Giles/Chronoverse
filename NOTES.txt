@@ -1,0 +1,5 @@
+# Chronoverse Project
+
+Complete decentralized inheritance and time-capsule protocol implementation.
+
+All contracts, tests, and documentation are production-ready.
